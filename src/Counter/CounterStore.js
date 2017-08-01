@@ -1,5 +1,4 @@
 import { observable, action } from 'mobx';
-// import autobind from 'autobind-decorator';
 
 export default class CounterStore {
   @observable count = 0;
