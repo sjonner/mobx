@@ -6,9 +6,10 @@ import './index.css';
 import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './stores';
+import storedObservable from './storedObservable';
 
 ReactDOM.render(
-	<Provider store={store}>
+	<Provider store={storedObservable('mobx-stores', store, 200)}>
 		<App>
 			<DevTools position={{bottom: 0}} />
 		</App>
