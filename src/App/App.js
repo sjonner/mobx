@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Counter from '../Counter/Counter';
+import Todo from '../Todo/Todo';
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,6 +16,8 @@ class App extends Component {
         </div>
         <div className="App-intro">
           <Counter />
+          <hr />
+          <Todo />
         </div>
       </div>
     );

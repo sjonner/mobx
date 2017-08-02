@@ -1,0 +1,19 @@
+.TodoItem {
+	position: relative;
+}
+.TodoItem.is-done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.TodoItem-actions {
+ 	opacity: 0;
+ 	margin-left: 10px;
+ }
+.TodoItem:hover  .TodoItem-actions {
+	opacity: 1;
+}
+
+.TodoItem-task {
+	cursor: default;
+}

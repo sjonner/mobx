@@ -40,6 +40,37 @@ exports[`renders a snapshot 1`] = `
         reset
       </button>
     </div>
+    <hr />
+    <form
+      method="POST"
+      onSubmit={[Function]}
+    >
+      <input
+        autoComplete="off"
+        name="newTodo"
+        placeholder="add a new todo"
+      />
+      <button
+        type="submit"
+      >
+        add
+      </button>
+      <div>
+        <small>
+          <em>
+            double click a todo to edit
+          </em>
+        </small>
+        <br />
+        <small>
+          <em>
+            alt + click a todo to mark as done
+          </em>
+        </small>
+        <br />
+      </div>
+      &lt;none&gt;
+    </form>
   </div>
 </div>
 `;
