@@ -29,7 +29,7 @@ export default class Todo extends Component {
 
         <div className="Todo-list">
           {todoStore.allTodos.map(todo =>
-            <TodoItem  key={todo.id} todo={todo} />
+            <TodoItem key={todo.id} todo={todo} />
           )}
         </div>
       </form>

@@ -12,35 +12,10 @@ exports[`renders a snapshot 1`] = `
       className="App-logo"
       src="logo.svg"
     />
-    <h2>
-      Welcome to React
-    </h2>
   </div>
   <div
     className="App-intro"
   >
-    <div>
-      Count: 
-      0
-       times!
-      <br />
-      <button
-        onClick={[Function]}
-      >
-        +
-      </button>
-      <button
-        onClick={[Function]}
-      >
-        -
-      </button>
-      <button
-        onClick={[Function]}
-      >
-        reset
-      </button>
-    </div>
-    <hr />
     <form
       method="POST"
       onSubmit={[Function]}
@@ -90,6 +65,19 @@ exports[`renders a snapshot 1`] = `
         className="Todo-list"
       />
     </form>
+    <div
+      style={
+        Object {
+          "margin": 40,
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+      >
+        load Counter module async
+      </button>
+    </div>
   </div>
 </div>
 `;
