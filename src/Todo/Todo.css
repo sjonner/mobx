@@ -1,14 +1,55 @@
-.TodoItem {
+.Todo-progress {
 	position: relative;
+	padding: 0 10px;
+	margin: 20px 0;
+	background: #efefef;
+	line-height: 4;
+}
+.Todo-progress-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 5px;
+	opacity: .2;
+	z-index: 0;
+	background: green none no-repeat;
+	will-change: width;
+	transition: width 200ms ease-in-out 0ms;
+}
+.Todo-progress-text {
+	display: inline-block;
+	position: relative;
+	line-height: 1.4;
+	vertical-align: middle;
+}
+
+.Todo-list {
+	width: 80%;
+	max-width: 600px;
+	margin: auto;
+	text-align: left;
+}
+
+.TodoItem {
+	display: flex;
+	align-items: center;
+	position: relative;
+	line-height: 2;
+	border-bottom: 1px dotted #dde;
 }
 .TodoItem.is-done {
-  text-decoration: line-through;
   opacity: 0.5;
+}
+.TodoItem.is-done .TodoItem-task {
+	text-decoration: line-through;
+}
+
+.TodoItem-task {
+	flex-grow: 1;
 }
 
 .TodoItem-actions {
  	opacity: 0;
- 	margin-left: 10px;
  }
 .TodoItem:hover  .TodoItem-actions {
 	opacity: 1;

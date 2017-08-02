@@ -69,7 +69,26 @@ exports[`renders a snapshot 1`] = `
         </small>
         <br />
       </div>
-      &lt;none&gt;
+      <div
+        className="Todo-progress"
+      >
+        <div
+          className="Todo-progress-bar"
+          style={
+            Object {
+              "width": "NaN%",
+            }
+          }
+        />
+        <div
+          className="Todo-progress-text"
+        >
+          &lt;none&gt;
+        </div>
+      </div>
+      <div
+        className="Todo-list"
+      />
     </form>
   </div>
 </div>

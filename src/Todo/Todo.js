@@ -20,11 +20,18 @@ export default class Todo extends Component {
           <small><em>alt + click a todo to mark as done</em></small><br/>
         </div>
 
-        {this.report()}
+        <div className="Todo-progress">
+          <div className="Todo-progress-bar" style={{width: `${todoStore.doneCount / todoStore.allTodos.length * 100}%`}} />
+          <div className="Todo-progress-text">
+            {this.report()}
+          </div>
+        </div>
 
-        {todoStore.allTodos.map(todo =>
-          <TodoItem  key={todo.id} todo={todo} />
-        )}
+        <div className="Todo-list">
+          {todoStore.allTodos.map(todo =>
+            <TodoItem  key={todo.id} todo={todo} />
+          )}
+        </div>
       </form>
     );
   }
@@ -32,8 +39,12 @@ export default class Todo extends Component {
   report() {
     const { todoStore } = this.props;
     return todoStore.openTodos.length === 0
-      ? "<none>"
-      : `Next todo: "${todoStore.openTodos[0].text}". Progress: ${todoStore.doneCount}/${todoStore.allTodos.length}`;
+      ? '<none>'
+      : <div>
+          Next todo: "{todoStore.openTodos[0].text}".
+          <br/>
+          <small>{`Progress: ${todoStore.doneCount}/${todoStore.allTodos.length}`}</small>
+        </div>;
   }
 
   @autobind
