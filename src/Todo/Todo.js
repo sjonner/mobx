@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import autobind from 'autobind-decorator';
+import styled from 'styled-components';
 import TodoItem from './TodoItem';
 import './Todo.css';
 
@@ -12,7 +13,7 @@ export default class Todo extends Component {
 
     return (
       <form method="POST" onSubmit={this.handleSubmit}>
-        <input name="newTodo"  autoComplete="off" placeholder="add a new todo" />
+        <Input name="newTodo"  autoComplete="off" placeholder="add a new todo" />
         <button type="submit">add</button>
 
         <div>
@@ -60,3 +61,8 @@ export default class Todo extends Component {
     event.target.elements.newTodo.value = '';
   }
 }
+
+const Input = styled.input`
+  margin: 10px 0;
+  padding: 5px;
+`
