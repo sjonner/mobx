@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import autobind from 'autobind-decorator';
 import styled from 'styled-components';
+import TodoList from './TodoList';
 import TodoItem from './TodoItem';
 import './Todo.css';
 
@@ -28,11 +29,11 @@ export default class Todo extends Component {
           </div>
         </div>
 
-        <div className="Todo-list">
+        <TodoList>
           {todoStore.allTodos.map(todo =>
             <TodoItem key={todo.id} todo={todo} />
           )}
-        </div>
+        </TodoList>
       </form>
     );
   }
