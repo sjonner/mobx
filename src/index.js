@@ -11,7 +11,9 @@ import storedObservable from './storedObservable';
 ReactDOM.render(
 	<Provider store={storedObservable('mobx-stores', store, 200)}>
 		<App>
-			<DevTools position={{bottom: 0}} />
+			{process.env.NODE_ENV !== 'production' &&
+				<DevTools position={{bottom: 0}} />
+			}
 		</App>
 	</Provider>,
 	document.getElementById('root')
